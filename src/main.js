@@ -258,16 +258,20 @@ function initSite() {
     const isMobile = window.innerWidth <= 900;
 
     if (isMobile) {
-      // En móviles: ocultar portada, activar e iniciar loop del video al instante
+      // En móviles: ocultar portada y activar el video (el autoplay/loop nativo del HTML inicia la reproducción al instante)
       heroImage.classList.remove('active');
       heroImage.style.display = 'none';
       heroVideo.classList.add('active');
-      heroVideo.loop = true;
-      heroVideo.play().catch(error => {
-        console.warn("La reproducción automática del video fue bloqueada en móvil:", error);
-      });
     } else {
-      // En desktop: mantener el comportamiento cíclico
+      // En desktop: desactivar autoplay/loop del HTML para controlar el ciclo mediante JS
+      heroVideo.removeAttribute('autoplay');
+      heroVideo.loop = false;
+      heroVideo.pause();
+      heroVideo.currentTime = 0;
+
+      heroImage.classList.add('active');
+      heroVideo.classList.remove('active');
+
       function startHeroLoop() {
         // 1. Mostrar la imagen de portada durante 4 segundos
         setTimeout(() => {
