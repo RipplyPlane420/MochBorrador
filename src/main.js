@@ -23,7 +23,7 @@ function getDirectDriveUrl(url) {
     const match = url.match(/id=([^&]+)/);
     if (match && match[1]) fileId = match[1];
   }
-  
+
   if (fileId) {
     return `https://drive.google.com/thumbnail?id=${fileId}&sz=w1600`;
   }
@@ -213,7 +213,7 @@ const GALLERY_DATA = {
 
 // 2. FUNCIÓN DE INICIALIZACIÓN PRINCIPAL DEL SITIO
 function initSite() {
-  
+
   // A. PROCESAR TODAS LAS URL DE GOOGLE DRIVE EN EL DOM
   // Traduce imágenes estáticas en tags <img>
   document.querySelectorAll('img').forEach(img => {
@@ -228,7 +228,7 @@ function initSite() {
   if (footerLogo && footerLogo.src.includes('drive.google.com')) {
     footerLogo.src = getDirectDriveUrl(footerLogo.src);
   }
-  
+
   // Traduce los fondos dinámicos [data-bg] (Menú y Parallax)
   document.querySelectorAll('[data-bg]').forEach(el => {
     const bgUrl = el.getAttribute('data-bg');
@@ -259,7 +259,7 @@ function initSite() {
       // 1. Mostrar la imagen de portada durante 4 segundos
       setTimeout(() => {
         heroVideo.currentTime = 0;
-        
+
         // 2. Intentar reproducir el video
         heroVideo.play().then(() => {
           // 3. Cuando inicia la reproducción, hacemos el crossfade
@@ -407,7 +407,7 @@ function initSite() {
     const imageUrls = GALLERY_DATA[filter] || [];
     imageUrls.forEach(url => {
       const directUrl = getDirectDriveUrl(url);
-      
+
       const galleryItem = document.createElement('div');
       galleryItem.className = 'gallery-item reveal-up';
       galleryItem.innerHTML = `
@@ -425,7 +425,7 @@ function initSite() {
       });
 
       galleryGrid.appendChild(galleryItem);
-      
+
       // Observar el nuevo item cargado para el reveal
       revealObserver.observe(galleryItem);
     });
@@ -449,7 +449,7 @@ function initSite() {
       document.documentElement.classList.remove('no-scroll');
       document.body.classList.remove('no-scroll');
     });
-    
+
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) {
         lightbox.classList.remove('active');
