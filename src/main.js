@@ -5,7 +5,7 @@
 function getDirectDriveUrl(url) {
   if (!url) return '';
   // Si es una ruta local de la carpeta Imagenes, retornar tal cual
-  if (url.startsWith('./Imagenes') || url.startsWith('Imagenes/')) {
+  if (url.startsWith('/Imagenes') || url.startsWith('./Imagenes') || url.startsWith('Imagenes/')) {
     return url;
   }
   // Si por alguna razón queda alguna URL de Drive en el DOM, la procesa a thumbnail
@@ -172,42 +172,42 @@ const MENU_DATA = {
 // Base de Datos de Imágenes de la Galería (Rutas de archivos locales)
 const GALLERY_DATA = {
   platillos: [
-    "./Imagenes/Galeria/Platillos/arrachera.jpg",
-    "./Imagenes/Galeria/Platillos/atun-sastre.jpg",
-    "./Imagenes/Galeria/Platillos/camarones-mosky.jpg",
-    "./Imagenes/Galeria/Platillos/chicharrones-de-rib.jpg",
-    "./Imagenes/Galeria/Platillos/ensalada-mochomos.jpg",
-    "./Imagenes/Galeria/Platillos/esparragos-a-la-ronca.jpg",
-    "./Imagenes/Galeria/Platillos/filete-en-su-jugo.jpg",
-    "./Imagenes/Galeria/Platillos/filete-mantequilla.jpg",
-    "./Imagenes/Galeria/Platillos/mochomos.jpg",
-    "./Imagenes/Galeria/Platillos/piedra-caliente.jpg",
-    "./Imagenes/Galeria/Platillos/pulpo-y-camaron-al-bacanora.jpg",
-    "./Imagenes/Galeria/Platillos/rib-eye-anejo.jpg",
-    "./Imagenes/Galeria/Platillos/salmon-colorado.jpg",
-    "./Imagenes/Galeria/Platillos/tacos-de-filete.jpg",
-    "./Imagenes/Galeria/Platillos/tacos-de-marlin-con-pulpo.jpg",
-    "./Imagenes/Galeria/Platillos/tomahak.jpg"
+    "/Imagenes/Galeria/Platillos/arrachera.jpg",
+    "/Imagenes/Galeria/Platillos/atun-sastre.jpg",
+    "/Imagenes/Galeria/Platillos/camarones-mosky.jpg",
+    "/Imagenes/Galeria/Platillos/chicharrones-de-rib.jpg",
+    "/Imagenes/Galeria/Platillos/ensalada-mochomos.jpg",
+    "/Imagenes/Galeria/Platillos/esparragos-a-la-ronca.jpg",
+    "/Imagenes/Galeria/Platillos/filete-en-su-jugo.jpg",
+    "/Imagenes/Galeria/Platillos/filete-mantequilla.jpg",
+    "/Imagenes/Galeria/Platillos/mochomos.jpg",
+    "/Imagenes/Galeria/Platillos/piedra-caliente.jpg",
+    "/Imagenes/Galeria/Platillos/pulpo-y-camaron-al-bacanora.jpg",
+    "/Imagenes/Galeria/Platillos/rib-eye-anejo.jpg",
+    "/Imagenes/Galeria/Platillos/salmon-colorado.jpg",
+    "/Imagenes/Galeria/Platillos/tacos-de-filete.jpg",
+    "/Imagenes/Galeria/Platillos/tacos-de-marlin-con-pulpo.jpg",
+    "/Imagenes/Galeria/Platillos/tomahak.jpg"
   ],
   restaurantes: [
-    "./Imagenes/Galeria/Restaurante/cdmx1.jpg",
-    "./Imagenes/Galeria/Restaurante/cdmx2.jpg",
-    "./Imagenes/Galeria/Restaurante/cdmx3.jpg",
-    "./Imagenes/Galeria/Restaurante/cdmx4.jpg",
-    "./Imagenes/Galeria/Restaurante/cdmx5.jpg",
-    "./Imagenes/Galeria/Restaurante/cdmx6.jpg",
-    "./Imagenes/Galeria/Restaurante/cdmx7.jpg",
-    "./Imagenes/Galeria/Restaurante/cdmx8.jpg",
-    "./Imagenes/Galeria/Restaurante/clc2.jpg",
-    "./Imagenes/Galeria/Restaurante/h1.jpg",
-    "./Imagenes/Galeria/Restaurante/h2.jpg",
-    "./Imagenes/Galeria/Restaurante/h9.jpg",
-    "./Imagenes/Galeria/Restaurante/h10.jpg",
-    "./Imagenes/Galeria/Restaurante/h11.jpg",
-    "./Imagenes/Galeria/Restaurante/obg1.jpg",
-    "./Imagenes/Galeria/Restaurante/qro1.jpg",
-    "./Imagenes/Galeria/Restaurante/qro2.jpg",
-    "./Imagenes/Galeria/Restaurante/qro3.jpg"
+    "/Imagenes/Galeria/Restaurante/cdmx1.jpg",
+    "/Imagenes/Galeria/Restaurante/cdmx2.jpg",
+    "/Imagenes/Galeria/Restaurante/cdmx3.jpg",
+    "/Imagenes/Galeria/Restaurante/cdmx4.jpg",
+    "/Imagenes/Galeria/Restaurante/cdmx5.jpg",
+    "/Imagenes/Galeria/Restaurante/cdmx6.jpg",
+    "/Imagenes/Galeria/Restaurante/cdmx7.jpg",
+    "/Imagenes/Galeria/Restaurante/cdmx8.jpg",
+    "/Imagenes/Galeria/Restaurante/clc2.jpg",
+    "/Imagenes/Galeria/Restaurante/h1.jpg",
+    "/Imagenes/Galeria/Restaurante/h2.jpg",
+    "/Imagenes/Galeria/Restaurante/h9.jpg",
+    "/Imagenes/Galeria/Restaurante/h10.jpg",
+    "/Imagenes/Galeria/Restaurante/h11.jpg",
+    "/Imagenes/Galeria/Restaurante/obg1.jpg",
+    "/Imagenes/Galeria/Restaurante/qro1.jpg",
+    "/Imagenes/Galeria/Restaurante/qro2.jpg",
+    "/Imagenes/Galeria/Restaurante/qro3.jpg"
   ]
 };
 
