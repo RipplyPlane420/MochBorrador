@@ -633,16 +633,14 @@ h1, h2, h3, h4 {
   overflow: hidden;
   position: relative;
   cursor: pointer;
-}
-
-.gallery-item.loading {
-  background-color: var(--bg-card); /* Fondo mientras carga la imagen */
-  min-height: 180px; /* Evita que el contenedor colapse a altura 0 y salte el diseño */
+  background-color: var(--bg-card); /* Fondo gris de carga */
+  aspect-ratio: 16 / 10; /* Fija la proporción para precalcular la altura y evitar saltos de Grid */
 }
 
 .gallery-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al contenedor sin distorsionarla */
   display: block;
   filter: grayscale(100%);
   opacity: 0; /* Oculta la imagen inicialmente */

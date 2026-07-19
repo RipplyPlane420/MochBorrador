@@ -428,7 +428,7 @@ function initSite() {
       const directUrl = getDirectDriveUrl(url);
 
       const galleryItem = document.createElement('div');
-      galleryItem.className = 'gallery-item loading reveal-up';
+      galleryItem.className = 'gallery-item reveal-up';
       
       const img = document.createElement('img');
       img.className = 'gallery-img';
@@ -436,7 +436,6 @@ function initSite() {
       img.alt = 'Mochomos Registro Visual';
       img.onload = () => {
         img.classList.add('loaded');
-        galleryItem.classList.remove('loading');
       };
       img.src = directUrl;
 
