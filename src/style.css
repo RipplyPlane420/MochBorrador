@@ -633,6 +633,8 @@ h1, h2, h3, h4 {
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  background-color: var(--bg-card); /* Fondo mientras carga la imagen */
+  min-height: 180px; /* Evita que el contenedor colapse a altura 0 y salte el diseño */
 }
 
 .gallery-img {
@@ -640,12 +642,17 @@ h1, h2, h3, h4 {
   height: auto;
   display: block;
   filter: grayscale(100%);
-  transition: var(--transition-slow);
+  opacity: 0; /* Oculta la imagen inicialmente */
+  transition: opacity 0.5s ease, filter 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .gallery-item:hover .gallery-img {
   filter: grayscale(0%);
   transform: scale(1.05);
+}
+
+.gallery-img.loaded {
+  opacity: 1; /* Muestra la imagen suavemente cuando termina de cargar */
 }
 
 /* SUCURSALES (SPLIT-SCREEN Y ASIMÉTRICO) */

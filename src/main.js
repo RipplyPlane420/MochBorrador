@@ -429,9 +429,17 @@ function initSite() {
 
       const galleryItem = document.createElement('div');
       galleryItem.className = 'gallery-item reveal-up';
-      galleryItem.innerHTML = `
-        <img src="${directUrl}" alt="Mochomos Registro Visual" class="gallery-img" loading="lazy">
-      `;
+      
+      const img = document.createElement('img');
+      img.className = 'gallery-img';
+      img.loading = 'lazy';
+      img.alt = 'Mochomos Registro Visual';
+      img.onload = () => {
+        img.classList.add('loaded');
+      };
+      img.src = directUrl;
+
+      galleryItem.appendChild(img);
 
       // Clic para abrir Lightbox
       galleryItem.addEventListener('click', () => {
