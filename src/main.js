@@ -258,13 +258,14 @@ function initSite() {
     const isMobile = window.innerWidth <= 900;
 
     if (isMobile) {
-      // En móviles: ocultar portada y activar el video (el autoplay/loop nativo del HTML inicia la reproducción al instante)
-      heroImage.classList.remove('active');
-      heroImage.style.display = 'none';
-      heroVideo.classList.add('active');
+      // En móviles: solo mostrar la portada y ocultar/desactivar el video por completo (ahorra datos móviles)
+      heroImage.classList.add('active');
+      heroImage.style.display = 'block';
+      heroVideo.classList.remove('active');
+      heroVideo.style.display = 'none';
+      heroVideo.pause();
     } else {
-      // En desktop: desactivar autoplay/loop del HTML para controlar el ciclo mediante JS
-      heroVideo.removeAttribute('autoplay');
+      // En desktop: inicializar y controlar el ciclo (portada -> video -> portada) mediante JS
       heroVideo.loop = false;
       heroVideo.pause();
       heroVideo.currentTime = 0;
