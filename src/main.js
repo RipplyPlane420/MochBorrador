@@ -255,33 +255,47 @@ function initSite() {
   const heroVideo = document.getElementById('heroVideo');
 
   if (heroImage && heroVideo) {
-    function startHeroLoop() {
-      // 1. Mostrar la imagen de portada durante 4 segundos
-      setTimeout(() => {
-        heroVideo.currentTime = 0;
+    const isMobile = window.innerWidth <= 900;
 
-        // 2. Intentar reproducir el video
-        heroVideo.play().then(() => {
-          // 3. Cuando inicia la reproducción, hacemos el crossfade
-          heroVideo.classList.add('active');
-          heroImage.classList.remove('active');
-        }).catch(error => {
-          console.warn("La reproducción automática del video fue bloqueada, reintentando...", error);
-          setTimeout(startHeroLoop, 3000);
-        });
-      }, 4000);
-    }
+    if (isMobile) {
+      // En móviles: ocultar portada, activar e iniciar loop del video al instante
+      heroImage.classList.remove('active');
+      heroImage.style.display = 'none';
+      heroVideo.classList.add('active');
+      heroVideo.loop = true;
+      heroVideo.play().catch(error => {
+        console.warn("La reproducción automática del video fue bloqueada en móvil:", error);
+      });
+    } else {
+      // En desktop: mantener el comportamiento cíclico
+      function startHeroLoop() {
+        // 1. Mostrar la imagen de portada durante 4 segundos
+        setTimeout(() => {
+          heroVideo.currentTime = 0;
 
-    // Al finalizar el video completo, regresar a la imagen de portada y repetir el bucle
-    heroVideo.addEventListener('ended', () => {
-      heroImage.classList.add('active');
-      heroVideo.classList.remove('active');
-      // Esperar 4 segundos antes de volver a cruzar al video
+          // 2. Intentar reproducir el video
+          heroVideo.play().then(() => {
+            // 3. Cuando inicia la reproducción, hacemos el crossfade
+            heroVideo.classList.add('active');
+            heroImage.classList.remove('active');
+          }).catch(error => {
+            console.warn("La reproducción automática del video fue bloqueada, reintentando...", error);
+            setTimeout(startHeroLoop, 3000);
+          });
+        }, 4000);
+      }
+
+      // Al finalizar el video completo, regresar a la imagen de portada y repetir el bucle
+      heroVideo.addEventListener('ended', () => {
+        heroImage.classList.add('active');
+        heroVideo.classList.remove('active');
+        // Esperar 4 segundos antes de volver a cruzar al video
+        startHeroLoop();
+      });
+
+      // Iniciar bucle
       startHeroLoop();
-    });
-
-    // Iniciar bucle
-    startHeroLoop();
+    }
   }
 
   // C. NAVBAR EFECTO SCROLL (GLASSMORPHISM)
