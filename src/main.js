@@ -462,48 +462,7 @@ function initSite() {
   // Renderizar la pestaña inicial (platillos) por defecto
   renderGallery('platillos');
 
-  // H. PARALLAX EN MÓVIL VÍA JAVASCRIPT
-  // background-attachment: fixed está roto en iOS/Android.
-  // Simulamos el efecto compensando el scroll exactamente para que el fondo
-  // se vea completamente fijo, igual que en desktop.
-  function initMobileParallax() {
-    if (window.innerWidth > 900) return;
 
-    const parallaxSections = document.querySelectorAll('.parallax-section');
-    if (!parallaxSections.length) return;
-
-    function updateParallax() {
-      const scrollY = window.scrollY;
-      const windowH = window.innerHeight;
-
-      parallaxSections.forEach(section => {
-        // Posición ABSOLUTA de la sección desde el inicio del documento
-        const sectionTop = section.getBoundingClientRect().top + scrollY;
-        
-        // Para simular background-attachment: fixed:
-        // queremos que el centro de la imagen esté en el centro del viewport.
-        // En modo scroll, la posición del fondo es relativa al elemento.
-        // Centro del viewport desde el top del elemento = (windowH/2) - (sectionTop - scrollY)
-        const bgYpx = (windowH / 2) - (sectionTop - scrollY);
-        section.style.backgroundPosition = `50% ${bgYpx}px`;
-      });
-    }
-
-    window.addEventListener('scroll', updateParallax, { passive: true });
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 900) {
-        document.querySelectorAll('.parallax-section').forEach(s => {
-          s.style.backgroundPosition = '';
-        });
-      } else {
-        updateParallax();
-      }
-    });
-
-    updateParallax();
-  }
-
-  initMobileParallax();
 }
 
 // 3. EJECUCIÓN ROBUSTA DE LA INICIALIZACIÓN

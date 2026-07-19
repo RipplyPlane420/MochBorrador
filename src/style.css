@@ -1099,13 +1099,13 @@ h1, h2, h3, h4 {
     height: 100%;
     background-color: #000;
   }
-  /* Móvil: scroll normal, JS controla background-position para simular parallax */
+  /* Móvil: scroll normal y fondo centrado sin JS parallax */
   .parallax-section {
     background-attachment: scroll !important;
+    background-position: center !important;
     background-size: cover !important;
     background-color: #000000 !important;
     clip-path: none !important;
-    /* NO background-position aquí — el JS lo controla dinámicamente */
   }
   .parallax-section::before {
     display: none !important;
