@@ -633,6 +633,9 @@ h1, h2, h3, h4 {
   overflow: hidden;
   position: relative;
   cursor: pointer;
+}
+
+.gallery-item.loading {
   background-color: var(--bg-card); /* Fondo mientras carga la imagen */
   min-height: 180px; /* Evita que el contenedor colapse a altura 0 y salte el diseño */
 }
