@@ -1,0 +1,5 @@
+# robots.txt para Mochomos (Reemplazar mochomos.com con el dominio real)
+User-agent: *
+Allow: /
+
+Sitemap: https://mochomos.com/sitemap.xml

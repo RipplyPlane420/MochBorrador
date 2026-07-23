@@ -761,7 +761,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 400;
   color: var(--text-main);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .branch-tel a {
@@ -772,6 +772,28 @@ h1, h2, h3, h4 {
 .branch-tel a:hover {
   border-bottom-color: var(--accent);
   color: var(--accent);
+}
+
+.branch-link-btn {
+  display: inline-block;
+  margin-bottom: 30px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 12px 25px;
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: max-content;
+  transition: var(--transition-fast);
+}
+
+.branch-link-btn:hover {
+  background-color: rgba(197, 168, 128, 0.1);
+  color: var(--text-main);
+  border-color: var(--accent-light);
 }
 
 .branch-hours {
