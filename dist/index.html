@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mochomos | Fusión Sonorense - Sitio Oficial</title>
+  <meta name="description" content="Experimenta la gastronomía sonorense de lujo extremo. Un diseño de alta costura culinaria.">
+  <link rel="icon" type="image/png" href="/Imagenes/Logos/imgi_1_logo-bkp.webp">
+  
+  <!-- Tipografías de Alta Gama -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@200;300;400;600&family=Syne:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <script type="module" crossorigin src="/assets/main-DvcHhpCN.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-D-JDD8oY.css">
+</head>
+<body>
+
+  <!-- NAVBAR ULTRA-MINIMALISTA -->
+  <header class="header">
+    <nav class="navbar" id="navbar">
+      <!-- Botón de Menú Móvil -->
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir Menú">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links nav-left">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#menu" class="nav-link">Menú</a>
+      </div>
+      
+      <div class="nav-logo">
+        <a href="#inicio">
+          <img src="/Imagenes/Logos/imgi_1_logo-bkp.webp" alt="Mochomos Logo" class="logo-img" id="logoImg">
+        </a>
+      </div>
+      
+      <div class="nav-links nav-right">
+        <a href="#galeria" class="nav-link">Galería</a>
+        <a href="#sucursales" class="nav-link">Sucursales</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MENÚ MÓVIL PANTALLA COMPLETA -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-links">
+      <a href="#inicio" class="mobile-nav-link">Inicio</a>
+      <a href="#menu" class="mobile-nav-link">Menú</a>
+      <a href="#galeria" class="mobile-nav-link">Galería</a>
+      <a href="#sucursales" class="mobile-nav-link">Sucursales</a>
+    </div>
+  </div>
+
+  <!-- HERO SECTION INMERSIVO -->
+  <section id="inicio" class="hero-section">
+    <div class="hero-bg-container">
+      <img src="/Portada_Inicio.webp" alt="Mochomos Portada" class="hero-media active" id="heroImage">
+      <video src="/Video_Inicio.mp4" muted playsinline class="hero-media" id="heroVideo"></video>
+      <div class="hero-overlay"></div>
+    </div>
+  </section>
+
+  <!-- PARALLAX SECTION 1 (VANGUARDIA) -->
+  <section class="parallax-section" data-bg="/Imagenes/Fondos/h10.webp">
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content reveal-up">
+      <p class="parallax-text">"GASTRONOMÍA DE ALTA COSTURA"</p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN EDITORIAL ASIMÉTRICA: MENÚ -->
+  <section id="menu" class="menu-section section-padding">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-subtitle">GASTRONOMÍA</span>
+        <h2 class="section-title">EL MENÚ</h2>
+        <p class="section-desc">Un homenaje vanguardista a las raíces de Sonora. Selecciona una categoría para descubrir su esencia.</p>
+      </div>
+
+      <!-- Grid Editorial de Categorías -->
+      <div class="menu-grid">
+        <!-- Entrada -->
+        <div class="menu-card reveal-up" data-category="entradas" data-bg="/Imagenes/Platillos/Entradas/seccion_entradas.webp">
+          <div class="menu-card-bg"></div>
+          <div class="menu-card-content">
+            <h3 class="category-name-vertical">ENTRADAS</h3>
+            <span class="category-discover">DESCUBRIR</span>
+          </div>
+        </div>
+
+        <!-- Carnes -->
+        <div class="menu-card reveal-up" data-category="carnes" data-bg="/Imagenes/Platillos/Carnes/seccion_carnes.webp">
+          <div class="menu-card-bg"></div>
+          <div class="menu-card-content">
+            <h3 class="category-name-vertical">CARNES</h3>
+            <span class="category-discover">DESCUBRIR</span>
+          </div>
+        </div>
+
+        <!-- Mariscos -->
+        <div class="menu-card reveal-up" data-category="mariscos" data-bg="/Imagenes/Platillos/Mariscos/seccion_mariscos.webp">
+          <div class="menu-card-bg"></div>
+          <div class="menu-card-content">
+            <h3 class="category-name-vertical">MARISCOS</h3>
+            <span class="category-discover">DESCUBRIR</span>
+          </div>
+        </div>
+
+        <!-- Tacos -->
+        <div class="menu-card reveal-up" data-category="tacos" data-bg="/Imagenes/Platillos/Tacos/seccion_Tacos.webp">
+          <div class="menu-card-bg"></div>
+          <div class="menu-card-content">
+            <h3 class="category-name-vertical">TACOS</h3>
+            <span class="category-discover">DESCUBRIR</span>
+          </div>
+        </div>
+
+        <!-- Ensaladas -->
+        <div class="menu-card reveal-up" data-category="ensaladas" data-bg="/Imagenes/Platillos/Ensaladas/seccion_ensaladas.webp">
+          <div class="menu-card-bg"></div>
+          <div class="menu-card-content">
+            <h3 class="category-name-vertical">ENSALADAS</h3>
+            <span class="category-discover">DESCUBRIR</span>
+          </div>
+        </div>
+
+        <!-- Vegano -->
+        <div class="menu-card reveal-up" data-category="vegano" data-bg="/Imagenes/Platillos/Vegano/seccion_vegano.webp">
+          <div class="menu-card-bg"></div>
+          <div class="menu-card-content">
+            <h3 class="category-name-vertical">VEGANO</h3>
+            <span class="category-discover">DESCUBRIR</span>
+          </div>
+        </div>
+
+        <!-- Sopas -->
+        <div class="menu-card reveal-up" data-category="sopas" data-bg="/Imagenes/Platillos/Sopas/seccion_sopas.webp">
+          <div class="menu-card-bg"></div>
+          <div class="menu-card-content">
+            <h3 class="category-name-vertical">SOPAS</h3>
+            <span class="category-discover">DESCUBRIR</span>
+          </div>
+        </div>
+
+        <!-- De la granja -->
+        <div class="menu-card reveal-up" data-category="granja" data-bg="/Imagenes/Platillos/De la granja/seccion_de_la_granja.webp">
+          <div class="menu-card-bg"></div>
+          <div class="menu-card-content">
+            <h3 class="category-name-vertical">DE LA GRANJA</h3>
+            <span class="category-discover">DESCUBRIR</span>
+          </div>
+        </div>
+
+        <!-- Niños -->
+        <div class="menu-card reveal-up" data-category="ninos" data-bg="/Imagenes/Platillos/Niños/seccion_niños.webp">
+          <div class="menu-card-bg"></div>
+          <div class="menu-card-content">
+            <h3 class="category-name-vertical">NIÑOS</h3>
+            <span class="category-discover">DESCUBRIR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARALLAX SECTION 2 (SABOR ANCESTRAL) -->
+  <section class="parallax-section" data-bg="/Imagenes/Fondos/cdmx5.webp">
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content reveal-up">
+      <p class="parallax-text">"SABOR ANCESTRAL, PRESENTACIÓN CONTEMPORÁNEA"</p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN GALERÍA MASONRY -->
+  <section id="galeria" class="gallery-section section-padding">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-subtitle">VISUALES</span>
+        <h2 class="section-title">LA GALERÍA</h2>
+      </div>
+
+      <!-- Filtros Minimalistas -->
+      <div class="gallery-filters reveal-up">
+        <button class="filter-btn active" data-filter="platillos">
+          PLATILLOS
+          <span class="gold-dot"></span>
+        </button>
+        <button class="filter-btn" data-filter="restaurantes">
+          FOTOS DE RESTAURANTES
+          <span class="gold-dot"></span>
+        </button>
+      </div>
+
+      <!-- Masonry Grid sin bordes -->
+      <div class="gallery-masonry" id="galleryGrid">
+        <!-- Las imágenes se renderizarán dinámicamente con JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PARALLAX SECTION 3 (TRADICIÓN) -->
+  <section class="parallax-section" data-bg="/Imagenes/Fondos/clc2.webp">
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content reveal-up">
+      <p class="parallax-text">"LA TRADICIÓN DE SONORA EN CADA DETALLE"</p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN SUCURSALES (DISEÑO SPLIT-SCREEN / GRID ASIMÉTRICO) -->
+  <section id="sucursales" class="branches-section section-padding">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-subtitle">UBICACIONES</span>
+        <h2 class="section-title">SUCURSALES</h2>
+      </div>
+
+      <!-- Sucursales Grid -->
+      <div class="branches-container">
+        
+        <!-- Hermosillo -->
+        <div class="branch-item reveal-up">
+          <div class="branch-visual">
+            <div class="branch-img-wrapper">
+              <img src="/Imagenes/Sucursales/Mochomos Hermosillo.webp" alt="Mochomos Hermosillo" class="branch-img">
+            </div>
+            <div class="branch-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3485.2701122213925!2d-110.9535867161937!3d29.12722235882853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ce868ab2352d4d%3A0x68d248785be530a0!2sMochomos%20Fusi%C3%B3n%20Sonorense!5e0!3m2!1ses-419!2smx!4v1784263444599!5m2!1ses-419!2smx" width="100%" height="300" style="border:0; filter: grayscale(100%) invert(90%);" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="branch-info">
+            <h3 class="branch-title"><a href="/sucursales/hermosillo">HERMOSILLO</a></h3>
+            <p class="branch-address">Bulevar José María Morelos 647, Colinas del, Bachoco, 83104 Hermosillo, Son.</p>
+            <p class="branch-tel">Tel: <a href="tel:+526622112177">+52 662 211 2177</a></p>
+            <div class="branch-hours">
+              <h4 class="hours-title">HORARIOS</h4>
+              <p>Lunes a Jueves: 1:00 PM – 12:00 AM</p>
+              <p>Viernes y Sábado: 1:00 PM – 1:00 AM</p>
+              <p>Domingo: 1:00 PM – 5:30 PM</p>
+            </div>
+            <a href="/sucursales/hermosillo" class="branch-link-btn">Ver Detalles y Menú</a>
+          </div>
+        </div>
+
+        <!-- Guadalajara -->
+        <div class="branch-item reverse reveal-up">
+          <div class="branch-visual">
+            <div class="branch-img-wrapper">
+              <img src="/Imagenes/Sucursales/Mochomos Guadalajara.webp" alt="Mochomos Guadalajara" class="branch-img">
+            </div>
+            <div class="branch-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1866.0373625210536!2d-103.41234320000001!3d20.70719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428afdd1a042e93%3A0xbc2ada3f6d17adfa!2sMochomos%20Guadalajara!5e0!3m2!1ses-419!2smx!4v1784264087279!5m2!1ses-419!2smx" width="100%" height="300" style="border:0; filter: grayscale(100%) invert(90%);" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="branch-info">
+            <h3 class="branch-title"><a href="/sucursales/guadalajara">GUADALAJARA</a></h3>
+            <p class="branch-address">Av. Patria 188, Puerta de Hierro, 45116 Zapopan, Jal.</p>
+            <p class="branch-tel">Tel: <a href="tel:+523346240094">+52 334 624 0094</a></p>
+            <div class="branch-hours">
+              <h4 class="hours-title">HORARIOS</h4>
+              <p>Domingo y Lunes: 1:00 PM – 12:00 AM</p>
+              <p>Martes: 1:00 PM – 1:00 AM</p>
+              <p>Miércoles a Sábado: 1:00 PM – 2:00 AM</p>
+            </div>
+            <a href="/sucursales/guadalajara" class="branch-link-btn">Ver Detalles y Menú</a>
+          </div>
+        </div>
+
+        <!-- Aguascalientes -->
+        <div class="branch-item reveal-up">
+          <div class="branch-visual">
+            <div class="branch-img-wrapper">
+              <img src="/Imagenes/Sucursales/Mochomos Aguascalientes.webp" alt="Mochomos Aguascalientes" class="branch-img">
+            </div>
+            <div class="branch-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.411794510398!2d-102.30004842401365!3d21.91871515661686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ef987e62c865%3A0xb079fa9d62648f4c!2sMochomos%20Aguascalientes!5e0!3m2!1ses-419!2smx!4v1784267010110!5m2!1ses-419!2smx" width="100%" height="300" style="border:0; filter: grayscale(100%) invert(90%);" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="branch-info">
+            <h3 class="branch-title"><a href="/sucursales/aguascalientes">AGUASCALIENTES</a></h3>
+            <p class="branch-address">Av Independencia, Desarrollo Especial Galerías, 20124 Aguascalientes, Ags.</p>
+            <p class="branch-tel">Tel: <a href="tel:+524499655552">+52 449 965 5552</a></p>
+            <div class="branch-hours">
+              <h4 class="hours-title">HORARIOS</h4>
+              <p>Lunes a Sábado: 1:00 PM – 2:00 AM</p>
+              <p>Domingo: 1:00 PM – 7:00 PM</p>
+            </div>
+            <a href="/sucursales/aguascalientes" class="branch-link-btn">Ver Detalles y Menú</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PARALLAX SECTION 4 (EXPERIENCIA) -->
+  <section class="parallax-section" data-bg="/Imagenes/Fondos/h9.webp">
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content reveal-up">
+      <p class="parallax-text">"LA EXPERIENCIA MOCHOMOS"</p>
+    </div>
+  </section>
+
+  <!-- PARALLAX SECTION 5 (FUSIÓN CULINARIA) -->
+  <section class="parallax-section" data-bg="/Imagenes/Fondos/obg1.webp">
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content reveal-up">
+      <p class="parallax-text">"SABOR INCOMPARABLE, REUNIÓN EXCLUSIVA"</p>
+    </div>
+  </section>
+
+  <!-- MODAL DE MENÚ PARA CATEGORÍAS -->
+  <div class="menu-modal" id="menuModal">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-wrapper">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">&times;</button>
+      <div class="modal-content">
+        <span class="modal-subtitle">CATEGORÍA</span>
+        <h2 class="modal-title" id="modalTitle">CATEGORÍA</h2>
+        <div class="dishes-list" id="dishesList">
+          <!-- Platillos auténticos inyectados con JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX PARA LA GALERÍA -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <div class="lightbox-content">
+      <img src="" alt="Zoom" id="lightboxImg">
+    </div>
+  </div>
+
+  <!-- FOOTER DE LUJO -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo-container reveal-up">
+        <img src="/Imagenes/Logos/imgi_78_logo_footer.webp" alt="Mochomos Letra" class="footer-logo-img" id="footerLogo">
+      </div>
+      
+      <div class="footer-socials reveal-up">
+        <!-- Instagram -->
+        <a href="#" class="social-icon" aria-label="Instagram">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <!-- Facebook -->
+        <a href="#" class="social-icon" aria-label="Facebook">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+          </svg>
+        </a>
+        <!-- Twitter -->
+        <a href="#" class="social-icon" aria-label="Twitter">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer-copyright reveal-up">
+        <p>© 2026 Mochomos. Todos los derechos reservados.</p>
+        <p class="designer-tag">DISEÑO EDITORIAL DIGITAL PARA LA ALTA GASTRONOMÍA</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
