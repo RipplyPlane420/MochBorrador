@@ -1,5 +1,5 @@
-# robots.txt para Mochomos (Reemplazar mochomos.com con el dominio real)
+# robots.txt para Mochomos (Reemplazar quickspeedmx.com con el dominio real en el futuro)
 User-agent: *
 Allow: /
 
-Sitemap: https://mochomos.com/sitemap.xml
+Sitemap: https://quickspeedmx.com/sitemap.xml
