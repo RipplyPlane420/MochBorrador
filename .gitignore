@@ -1,0 +1,14 @@
+# Dependencias (Librerías locales instaladas)
+node_modules/
+
+# Archivos de compilación de Vite
+dist/
+dist-ssr/
+*.local
+
+# Archivos temporales de sistemas operativos o editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
